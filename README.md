@@ -1,4 +1,4 @@
-```markdown
+
 <div class="flex justify-center my-8">
     <a 
         href="https://smartbot1x.dev" 
@@ -9,7 +9,7 @@
         smartbot1x.dev
     </a>
 </div>
-```
+
 
 ## Webshop Next.js — Figma-driven build
 
