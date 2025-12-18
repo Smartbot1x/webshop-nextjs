@@ -1,0 +1,21 @@
+{
+  "name": "figma for copilot",
+  "id": "1583416310328775700",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [
+    "inspect",
+    "vscode"
+  ],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "dev"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}

@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Webshop Next.js — Figma-driven build
 
-## Getting Started
+Implements the Ecommerce wireframe from Figma with Next.js (App Router), Tailwind CSS v4, and public product APIs (DummyJSON/FakeStore).
 
-First, run the development server:
+### Run locally
 
-```bash
+```pwsh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```pwsh
+npm run build
+npm start
+```
 
-## Learn More
+### Folder structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` — App Router pages and UI
+  - `components/` — shared UI (Navbar, Footer, ProductCard, etc.)
+- `lib/` — API clients and utilities
+- `public/` — static assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Styling & tokens
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Tailwind v4 with tokens from Figma mapped into `app/globals.css` under `@theme inline`.
+- Fonts: Public Sans (primary), Inter (nav), loaded via `next/font`.
 
-## Deploy on Vercel
+### Data sources
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- DummyJSON: `https://dummyjson.com/products`
+- FakeStore: `https://fakestoreapi.com/products`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Accessibility & SEO
+
+- Semantic HTML, alt text on images, keyboard-friendly controls.
+- Base metadata in `app/layout.jsx` (OpenGraph, titles, descriptions).
+- Smooth scrolling enabled.
+
+### Testing
+
+Run unit tests with Vitest:
+
+```pwsh
+npm run test
+```
+
+### Deployment
+
+Vercel:
+
+```pwsh
+npm run build
+vercel deploy --prod
+```
+
+Netlify:
+
+```pwsh
+netlify deploy --build --prod
+```
+
+### Notes
+
+- Remote images from Figma and the APIs are allowed via `next.config.ts`.
+- API failures show inline error messages; loading states are displayed in each section.

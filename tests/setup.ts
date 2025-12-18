@@ -1,0 +1,10 @@
+import '@testing-library/jest-dom/vitest';
+import React from 'react';
+import { vi } from 'vitest';
+
+vi.mock('next/image', () => ({
+	default: (props: any) => {
+		// eslint-disable-next-line @next/next/no-img-element
+		return React.createElement('img', props);
+	},
+}));
