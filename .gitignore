@@ -4,11 +4,14 @@
 /node_modules
 /.pnp
 .pnp.*
+figma for copilot/
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+
+/figma for copilot
 
 # testing
 /coverage
